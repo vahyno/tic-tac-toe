@@ -54,18 +54,18 @@ Remind yourself how tic-tac-toe works by playing a few games with a classmate.
 
    ```js
    var paragraphs = $('p');
-   var firstParagraph = paragraphs.eq(0); // returns a jQuery element (so jQuery functions work on it)
-   var vanillaVersion = paragraphs[0]; // returns the JavaScript version of the element (most jQuery functions won't work on it)
+   var firstParagraph = paragraphs.eq(0); 
+   // returns the jQuery element at index 0 (can call jQuery functions on `firstParagraph` bc it is a JQuery object)
+   
+   var vanillaVersion = paragraphs[0]; 
+   // returns the JavaScript version of the element at indexo 0 (can NOT call jQuery functions on `vanillaVersion` bc it is NOT a JQuery object)
    ```
-
-* The jQuery version of `.forEach` is [`.each`](http://api.jquery.com/jquery.each/).
-
 
 <details><summary>Track Turns</summary><p>You need to keep track of whose turn it is. This will be important when deciding whether to draw an `X` or an `O`. Try storing the turn as a variable.</p></details>
 
-<details><summary>Claim a Box</summary><p>You'll need a way for your code to check whether a box is empty. When a box is claimed, use jQuery to change the box's DOM element somehow. Then you can check that feature of the box later! Test your ideas in the console.</p></details>
+<details><summary>Fill a Box In With X or O</summary><p>You'll need a way for your code to check whether a box is empty. When a box is claimed, use jQuery to change the box's DOM element somehow. Then you can check that feature of the box later! Test your ideas in the console.</p></details>
 
-<details><summary>Reset Everything</summary><p>Your reset button should change the board back to its initial configuration. Make sure you empty all the boxes and reset all other variables to their starting values. Don't forget the starting turn variable!</p></details>
+<details><summary>Reset the Board</summary><p>Your reset button should change the board back to its initial configuration. Make sure you empty all the boxes and reset all other variables to their starting values. Don't forget the starting turn variable!</p></details>
 
 
 <details><summary>
