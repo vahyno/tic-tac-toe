@@ -37,20 +37,37 @@ Remind yourself how tic-tac-toe works by playing a few games with a classmate.
 
 1. Add a reset button below the board.
 
-**Target DOM elements for gameplay**
+1. In your `app.js` file, write some JQuery code so that clicking on a box will fill it with the text 'X'.
 
-1. Use the `$()` jQuery function with CSS selectors to locate each of the DOM elements your user will click. Try this in your console to make sure your selection works. Set up variables for them in your `app.js`.
+1. To track turns, set a variable called `currentTurn` to 'X' at the top of your `$(document).ready()` function (before your box click handler). Inside your box click handler, make sure you fill in the clicked box with the `currentTurn` value. Afterwards, it should change `currentTurn` from 'X' to 'O' (or 'O' to 'X' if it's already 'O').
 
-1. After you find the element(s), use `.on` to set up a simple `click` event listener for each of those elements. Start by having your event handler just log a message that the element was clicked.  
+1. Click around on your board to make sure turns alternate (i.e. should fill in a box with 'X', then 'O', then 'X', etc.)
 
-1. Most of your game logic will happen when a user clicks inside the board, on one of the boxes.
+1. You'll notice that clicking on an already-filled box will still fill it with the new value. You want to prevent this! Add some code in your box click handler that does NOT run the code if the currently clicked box is already filled with some text.
+
+1. When you click the "Reset" button at the bottom of the page, it should reset the board to have only empty boxes. Write some JQuery code below your box click handler to [empty](https://api.jquery.com/empty/) the board's boxes on reset button click. It should also reset the `currentTurn` to its original value.
 
 
-## Hints and Tips:
+<details><summary>
 
-* The jQuery API docs are a great source of information on what jQuery can do (and how)!  Two categories you might find particularly useful are <a href="https://api.jquery.com/category/manipulation/">DOM Manipulation</a> and <a href="https://api.jquery.com/category/css/">CSS</a>. **When you're looking at jQuery docs for a method, scroll down a little to find the examples!**
+Style `X`s and `O`s
 
-* When the jQuery selector returns an "array" of elements, it's actually giving us a special jQuery collection. Use the  [`.eq`](https://api.jquery.com/eq/) method with regular array indices to get the jQuery elements out of the collection:
+</summary><p>Use jQuery to add a CSS class to the box when a player makes a move. (Not sure how? Google "jQuery add class", choose the jQuery API Documentation result, and find some examples!)</p></details>
+
+<details><summary>Detect a Draw</summary><p>The game can end when someone wins or when the board fills up. How can you check whether the board is full or still has space for the players to move?</p></details>
+
+<details><summary>Win!</summary>
+    <details><summary>Hint: what is winning?</summary><p>Start by listing all the ways to win at tic-tac-toe. There are 8 winning combinations of boxes!<p></details>
+    <details><summary>Big Hint: when to check for winner?</summary>Check for your winning combinations every time someone could win -- after every move!</p></details>  
+    <details><summary>Hint: showing a message</summary>Try an `alert`. For an extra challenge, put a message directly onto the page using jQuery!</details>
+</details>
+
+
+## Tips:
+
+* Don't hesitate to reference the JQuery API docs for help and code examples! <a href="https://api.jquery.com/category/manipulation/">DOM Manipulation</a> and <a href="https://api.jquery.com/category/css/">CSS</a> may be particularly useful.
+
+* When a JQuery selector returns an "array" of elements, it's actually giving us a special JQuery collection. Use the  [`.eq`](https://api.jquery.com/eq/) method with regular array indices to get the jQuery elements out of the collection:
 
    ```js
    var paragraphs = $('p');
@@ -60,31 +77,7 @@ Remind yourself how tic-tac-toe works by playing a few games with a classmate.
    var vanillaVersion = paragraphs[0]; 
    // returns the JavaScript version of the element at indexo 0 (can NOT call jQuery functions on `vanillaVersion` bc it is NOT a JQuery object)
    ```
-
-<details><summary>Track Turns</summary><p>You need to keep track of whose turn it is. This will be important when deciding whether to draw an `X` or an `O`. Try storing the turn as a variable.</p></details>
-
-<details><summary>Fill a Box In With X or O</summary><p>You'll need a way for your code to check whether a box is empty. When a box is claimed, use jQuery to change the box's DOM element somehow. Then you can check that feature of the box later! Test your ideas in the console.</p></details>
-
-<details><summary>Reset the Board</summary><p>Your reset button should change the board back to its initial configuration. Make sure you empty all the boxes and reset all other variables to their starting values. Don't forget the starting turn variable!</p></details>
-
-
-<details><summary>
-
-Style `X`s and `O`s
-
-</summary><p>Use jQuery to add a CSS class to the box when a player makes a move. (Not sure how? Google "jQuery add class", choose the jQuery API Documentation result, and find some examples!)</p></details>
-
-
-<details><summary>Detect a Draw</summary><p>The game can end when someone wins or when the board fills up. How can you check whether the board is full or still has space for the players to move?</p></details>
-
-
-<details><summary>Win!</summary>
-    <details><summary>Hint: what is winning?</summary><p>Start by listing all the ways to win at tic-tac-toe. There are 8 winning combinations of boxes!<p></details>
-    <details><summary>Big Hint: when to check for winner?</summary>Check for your winning combinations every time someone could win -- after every move!</p></details>  
-    <details><summary>Hint: showing a message</summary>Try an `alert`. For an extra challenge, put a message directly onto the page using jQuery!</details>
-</details>
-
-
+   
 <!--
 ## Submission
 
