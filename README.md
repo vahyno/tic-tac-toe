@@ -13,21 +13,6 @@ For this lab, we'll be making a tic-tac-toe game using the knowledge and skills 
 * A user should not be able to claim a box that has already been claimed for `X` or `O`.
 * Users should be able to click a "reset" button to clear all `X`'s and `O`'s from the board and restart the game.
 
-
-## Further Challenge Ideas
-
-* Display a message to indicate which player's turn is about to be played (`X` or `O`).    
-
-* If a player wins, show a message with the mark of the winner.  Separate your code that finds the winner (if there is a winner) into its own function.
-
-* If the board fills up before anyone wins, show a message declaring the game a draw.
-
-* Display separate colors for `X`'s and `O`'s.
-
-* Creatively style your tic-tac-toe game!  
-
-* Research "event delegation," and attach your event listeners to the whole board instead of individual boxes.
-
 ## How to Get Started
 
 **Play Tic-Tac-Toe**
@@ -107,3 +92,19 @@ Style `X`s and `O`s
 * Once you've finished the assignment and pushed your work to GitHub, you will fill out the daily pulse check with a link on Monday.
 * When we come back, you'll show off your tic-tac-toe game in a "science fair" style open presentation!
 -->
+
+
+
+## Further Challenge Ideas
+
+* Display a message to indicate which player's turn is about to be played (`X` or `O`).    
+
+* If a player wins, show a message with the mark of the winner.  Separate your code that finds the winner (if there is a winner) into its own function.
+
+* If the board fills up before anyone wins, show a message declaring the game a draw.
+
+* Display separate colors for `X`'s and `O`'s.
+
+* Creatively style your tic-tac-toe game!  
+
+* Research "event delegation," and attach your event listeners to the whole board instead of individual boxes.
