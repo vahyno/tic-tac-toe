@@ -71,13 +71,13 @@ Style `X`s and `O`s
 
    ```js
    var paragraphs = $('p');
-   var firstParagraph = paragraphs.eq(0); 
+   var firstParagraph = paragraphs.eq(0);
    // returns the jQuery element at index 0 (can call jQuery functions on `firstParagraph` bc it is a JQuery object)
-   
-   var vanillaVersion = paragraphs[0]; 
+
+   var vanillaVersion = paragraphs[0];
    // returns the JavaScript version of the element at indexo 0 (can NOT call jQuery functions on `vanillaVersion` bc it is NOT a JQuery object)
    ```
-   
+
 <!--
 ## Submission
 
