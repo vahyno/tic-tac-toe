@@ -1,8 +1,47 @@
 #board {
   margin-top: 10px;
+  margin: 0 auto;
 }
 
 .box {
   border: 1px solid black;
   height: 150px;
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: gold;
+}
+
+body {
+  background: #7FDBFF;
+}
+
+button {
+
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.box.X {
+  border: 1px solid black;
+  height: 150px;
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: red;
+}
+
+.box.O {
+  border: 1px solid black;
+  height: 150px;
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: blue;
+  color: white;
 }
